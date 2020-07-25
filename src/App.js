@@ -6,6 +6,7 @@ import Layout from './hoc/Layout/Layout';
 import Home from './containers/Home/Home';
 import Logout from './containers/Auth/Logout/Logout';
 import * as actionTypes from './store/actions';
+import Spinner from './components/UI/Spinner/Spinner';
 
 const Polls = React.lazy(() => {
   return import('./containers/Polls/Polls');
@@ -50,7 +51,7 @@ const app = props => {
   return (
     <div>
       <Layout email={props.email}>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Spinner />}>
           {routes}
         </Suspense>
       </Layout>

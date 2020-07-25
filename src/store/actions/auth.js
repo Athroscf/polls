@@ -9,11 +9,12 @@ export const authStart = () => {
     };
 };
 
-export const authSuccess = ( token, userId ) => {
+export const authSuccess = ( token, userId, email ) => {
     return {
         type: actionTypes.AUTH_SUCCESS,
         idToken: token,
-        userId: userId
+        userId: userId,
+        email: email
     };
 };
 

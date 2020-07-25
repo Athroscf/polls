@@ -1,0 +1,8 @@
+.RadioGroup {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.RadioButton {
+    display: inline-block;
+}

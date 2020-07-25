@@ -8,6 +8,7 @@ const logout = props => {
     const { onLogout } = props;
     useEffect(() => {
         onLogout();
+        document.title = 'Cerrando Sesión';
     }, [onLogout]);
 
     return (

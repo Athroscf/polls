@@ -15,7 +15,7 @@ const stats = props => {
 
     useEffect(() => {
         onInitPolls();
-        document.title = 'Estadísticas'
+        document.title = 'Encuestas - Estadísticas'
     }, []);
 
     const toHome = () => {

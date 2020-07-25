@@ -8,7 +8,7 @@ import classes from './Home.css';
 
 const home = props => {
     useEffect(() => {
-        document.title = 'Inicio'
+        document.title = 'Encuestas - Inicio';
     }, [])
     const nextPageHandler = ( page ) => {
         props.history.push({

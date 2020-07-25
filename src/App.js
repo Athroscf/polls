@@ -58,4 +58,17 @@ const app = props => {
   );
 };
 
-export default app;
+const mapStateToProps = state => {
+  return {
+    email: state.auth.email,
+    isAuth: state.auth.token !== null
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onTryAutoSignUp: () => dispatch(actionTypes.authCheckState()),
+  };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(app));

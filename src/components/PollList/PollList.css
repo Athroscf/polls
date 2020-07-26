@@ -4,6 +4,7 @@
     width: 80%;
     align-items: center;
     text-align: center;
+    animation: listShown 2s ease-out forwards;
 }
 
 @media (min-width: 815px) {
@@ -11,5 +12,16 @@
         float: left;
         margin: 5% 5%;
         width: 30%;
+    }
+}
+
+@keyframes listShown {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

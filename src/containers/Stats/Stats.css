@@ -3,11 +3,13 @@
     width: 80%;
     align-items: center;
     text-align: center;
+    animation: statsComponentShown 2s ease-out forwards;
 }
 
 .Chart {
     height: 35%;
     margin-top: 10%;
+    animation: statsShown 2s ease-out forwards;
 }
 
 .Typography {
@@ -21,4 +23,26 @@
 .Button {
     margin-top: 5%;
     margin-left: 10%;
+}
+
+@keyframes statsComponentShown {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes statsShown {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

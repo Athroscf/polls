@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 
+import { useWindowSize } from '../../hooks/useWindowSize';
 import * as pollActions from '../../store/actions';
 import axios from '../../axios-polls';
 import Chart from '../../components/Chart/Chart';
@@ -12,6 +13,8 @@ import { ObjectIding } from '../../shared/utility';
 
 const stats = props => {
     const { onInitPolls, results, loading } = props;
+    let windowSize = useWindowSize();
+    let isMobile = windowSize.width <= 500;
 
     useEffect(() => {
         onInitPolls();
@@ -26,10 +29,18 @@ const stats = props => {
                               <Spinner />;
 
     if (!loading && results) {
-        stats = <div>
-                    <Typography variant="h3" className={classes.Typography}>
+        let typography = <Typography variant="h3" className={classes.Typography}>
                         Encuesta: {results.pollName}
-                    </Typography>
+                     </Typography>;
+
+        if (isMobile) {
+            typography = <Typography variant="h4" className={classes.Typography}>
+                            Encuesta: {results.pollName}
+                         </Typography>
+        }
+
+        stats = <div>
+                    {typography}
                     {ObjectIding(props.polls[props.pollId].questions)
                         .map(question => (
                             <div key={question.id} className={classes.Chart}>

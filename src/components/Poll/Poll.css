@@ -3,6 +3,7 @@
     width: 80%;
     align-items: center;
     text-align: center;
+    animation: pollShown 0.4s ease-out forwards;
 }
 
 .Typography {
@@ -14,5 +15,16 @@
         margin: 0 5%;
         width: 50%;
         float: left;
+    }
+}
+
+@keyframes pollShown {
+    0% {
+        opacity: 0.4;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -8,6 +8,7 @@ const navigationItems = ( props ) => {
     return (
         <ul className={classes.NavigationItems}>
             <NavigationItem link={props.link} exact={props.exact}>
+                {props.children}
                 <Typography variant={props.variant}>
                     {props.content}
                 </Typography>

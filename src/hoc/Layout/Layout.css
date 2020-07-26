@@ -1,3 +1,10 @@
 .Layout {
-    margin: 100px 0;
+    margin: 30px 0;
+    min-width: 353px;
+}
+
+@media (min-width: 500px) {
+    .Layout {
+        margin: 60px 0;
+    }
 }

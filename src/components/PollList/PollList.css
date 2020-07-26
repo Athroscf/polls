@@ -1,8 +1,15 @@
 .PollList {
     position: relative;
     margin: 0 5%;
-    width: 40%;
-    float: left;
+    width: 80%;
     align-items: center;
     text-align: center;
+}
+
+@media (min-width: 690px) {
+    .PollList {
+        float: left;
+        margin: 5% 5%;
+        width: 40%;
+    }
 }

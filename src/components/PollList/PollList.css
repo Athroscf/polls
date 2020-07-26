@@ -6,10 +6,10 @@
     text-align: center;
 }
 
-@media (min-width: 690px) {
+@media (min-width: 815px) {
     .PollList {
         float: left;
         margin: 5% 5%;
-        width: 40%;
+        width: 30%;
     }
 }

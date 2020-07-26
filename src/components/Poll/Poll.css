@@ -9,12 +9,10 @@
     margin-bottom: 5%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 815px) {
     .Poll {
-        margin: 10% 5%;
-        width: 80%;
-        align-items: center;
-        text-align: center;
+        margin: 0 5%;
+        width: 50%;
         float: left;
     }
 }

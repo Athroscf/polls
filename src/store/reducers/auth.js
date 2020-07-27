@@ -14,6 +14,17 @@ const authStart = ( state, action ) => {
 };
 
 const authSuccess = ( state, action ) => {
+    if (!action.email) {
+        let email = localStorage.getItem('email');
+        return updateObject(state, {
+            token: action.idToken,
+            userId: action.userId,
+            email: email,
+            error: null,
+            loading: null
+        });
+    }
+
     return updateObject(state, {
         token: action.idToken,
         userId: action.userId,
